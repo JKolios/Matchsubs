@@ -1,0 +1,5 @@
+Matching of subtitle and video files using regular expressions.
+Runs with Python 3.
+Usage:matchsubs.py [-v] [-r] (directory)
+Options:-v:Verbose operation.
+	-r:Recurse to subdirectories.
