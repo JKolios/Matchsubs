@@ -5,7 +5,7 @@ pattern matching. Can interpret episode numbering in the three most common forma
 
 * S *Season Number* E *Episode Number*, as in: S03E02.
 * *Season Number* x *Episode Number* as in: 1x05. 
-* *Season Number** *Episode Number* as in: 0705
+* *Season Number* *Episode Number* as in: 0705
 
 
 ###Usage
