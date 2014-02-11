@@ -1,4 +1,4 @@
-###Matching of subtitle and video files using regular expressions. 
+#### Intelligent matching of subtitle and video files using regular expressions. 
 ============
 Automatically matches the file names of all subtitle files in a given folder to their respective video files. Mainly meant for episodes of TV Series. Season and episode numbers are intelligently matched using regular expression 
 pattern matching. Can interpret episode numbering in the three most common formats:
