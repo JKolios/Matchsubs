@@ -121,7 +121,7 @@ class SubMatcher(object):
                 senumbers = self.parse_name_guessit(os.path.join(rename_dir, fname))
             except Exception as e:
                 if self.verbose:
-                    print 'Guessit exception occured: %s Defaulting to regular expression detection'
+                    print 'Guessit exception occured: %s Defaulting to regular expression detection' % e
                 senumbers = self.parse_name_re(os.path.join(rename_dir, fname))
 
             # If none match skip the file
@@ -184,7 +184,7 @@ class SubMatcher(object):
             print senumbers
 
         if len(senumbers) > 2:
-            senumbers = [num for num in senumbers if num is not None]
+            senumbers = (num for num in senumbers if num is not None)
 
         if self.verbose:
             print "Results after None filtering:"
@@ -196,9 +196,11 @@ class SubMatcher(object):
 
         # Check if the given file exists and is a regular file.
         if self.verbose:
-            print 'Trying regular expression match.\nAnalyzing ' + file_name
+            print 'Trying guessit match.\nAnalyzing ' + file_name
         info = guess_episode_info(file_name, info=['hash_mpc'])
         guessed_senumbers = (info['season'], info['episodeNumber'])
+        if self.verbose:
+            print 'Guessit results: %s' % guessed_senumbers
         print guessed_senumbers
         return guessed_senumbers
 
