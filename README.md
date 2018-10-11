@@ -1,5 +1,6 @@
-#### Intelligent matching of subtitle and video files using regular expressions. 
-============
+# Matchsubs
+## Matching of subtitle and video files using regular expressions. 
+
 Automatically matches the file names of all subtitle files in a given folder to their respective video files. Mainly meant for episodes of TV Series. Season and episode numbers are intelligently matched using regular expression 
 pattern matching. 
 
@@ -10,8 +11,9 @@ Can interpret episode numbering in the three most common formats:
 * *Season Number* *Episode Number* as in: 0705
 
 
-###Usage
-============
+### Usage
+
+```
 positional arguments:
   matchdirname  Target directory or file
 
@@ -29,4 +31,4 @@ optional arguments:
   -n N          Standardize all file names with the string *s* given. All video
                 and subtitle files found will be converted to:
                 *s*.S*xx*E*xx*.*extension*
-
+```
